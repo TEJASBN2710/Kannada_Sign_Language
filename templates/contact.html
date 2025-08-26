@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSL - Contact</title>
+    <link rel="shortcut icon" sizes="16x16" href="{{ url_for('static', filename='logo.jpg') }}"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+            font-family: 'Times New Roman';
+            background-image: url('static/kannada10.png'); /* Add your background image here */
+            background-size: 1700px 680px; /* Cover the entire viewport */
+            background-position: bottom; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            color: #333; /* Default text color */
+        }
+
+        header {
+            background-color: #faedcd;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Algerian', sans-serif; /* Use a specific font */
+            font-size: 25px; /* Increase font size */
+            font-weight: bold; /* Make the text bold */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+        }
+
+        nav {
+            background-color: orange;
+            overflow: hidden;
+            height: 35px;
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 14px;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Forte';
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 0, 0, 0.2); /* Change background on hover */
+        }
+
+        section {
+            margin: 20px; /* Add margin around the section */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 28px; /* Font size for the section heading */
+            margin-bottom: 10px; /* Space below the heading */
+        }
+
+        section p {
+            font-size: 16px; /* Font size for the paragraph */
+            line-height: 1.6; /* Line height for better readability */
+        }
+
+        section a {
+            color: blue; /* Link color */
+            text-decoration: underline; /* Underline links */
+        }
+
+        section a:hover {
+            color: darkblue; /* Darker color on hover */
+        }
+
+        .contact-details {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .contact-details li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Push the footer to the bottom */
+            width: 100%;
+        }
+
+        h2 {
+            color: #008000;
+        }
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        p {
+            color: #333;
+            font-size: 1.1em;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Kannada Sign Language</h1>
+</header>
+
+<nav>
+   <!--  <a href="{{url_for('contact')}}">Contact</a>
+    <a href="{{url_for('analyze')}}">Analyze</a> -->
+    <a href="{{url_for('about')}}">Home</a>
+</nav>
+
+<section>
+    <h2>Contact Information</h2>
+    <h3>How can we help you?</h3>
+    <p>If you have any questions or would like to get involved with the Kannada Sign Language, please reach out to us using any of the following methods:</p>
+    <div class="contact-info">
+        <p>&#9993; <a href="mailto:info@kannadasignlanguage.org">info@kannadasignlanguage.org</a></p>
+        <p>&#9742; +91 123 456 7890</p>
+        <p>&#128241; <a href="https://wa.me/1234567890" target="_blank">Click here to chat on WhatsApp</a></p>
+        <p>&#128247; <a href="https://www.instagram.com/kannadasignlanguage" target="_blank">Follow us on Instagram</a></p>
+        <p>&#128279; <a href="https://www.linkedin.com/company/kannadasignlanguage" target="_blank">Connect with us on LinkedIn</a></p>
+        <p>&#128206; <a href="https://www.facebook.com/kannadasignlanguage" target="_blank">Like us on Facebook</a></p>
+        <p>&#128187; <a href="https://twitter.com/kannadasignlang" target="_blank">Follow us on Twitter</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Kannada Sign Language. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

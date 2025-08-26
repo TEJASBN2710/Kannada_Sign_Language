@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSL - Classification</title>
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="shortcut icon" sizes="16x16" href="{{ url_for('static', filename='logo.jpg') }}"/>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='bootstrap.css') }}">
+
+    <!-- Stylesheet -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+
+
+<nav class="navbar-fixed-top transparrent-bg">
+  <div class="container">
+    <div id="menuzord" class="menuzord red"> <a href="" class="menuzord-brand"><img src="{{url_for('static', filename='logo.jpg')}}" />
+
+</a>
+            
+    </div>
+  </div>
+</nav>
+    <div class="container">
+
+        <div class="riceimages">
+            <img id="riceimg" src="{{url_for('static', filename='kannada.png')}}" />
+        </div>
+
+       <div class="riceimages">
+        <h1>Kannada Sign Language</h1>
+        
+       </div>
+            
+  <!--   <div class="riceimages">
+        <div class="dropbox ">
+        <label for="images" class="drop-container">
+            <span class="drop-title">Upload File
+                </span>
+            <img src="{{url_for('static', filename='upload.png')}}" />
+                
+        <input type="file" id="images" accept="image/*" required>
+       
+
+        <button class="btn"><a href="{{ url_for('result')}}" target="_blank">Predict</a></button>
+            </label>
+            </div>
+
+    </div> -->
+
+    <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>Upload the "image" file here.</h4>
+          <br>
+        <form action = "{{ url_for('result') }}" method = "POST" enctype="multipart/form-data" >
+        <input class="btn btn-login" type="file" name="file" style="color:darkred;"/>
+          <br>
+          <div class="col-md-4">
+        <img src="{{url_for('static', filename='logo.jpg')}}" alt="company" style="width:50px;height:50px;padding-right:3%"/>
+            <br>
+      </div>
+       <button class="btn btn-login"><h3>Check Sign</h3></button>
+        </form>
+      </div>
+      
+    </div>
+        <br>
+  </div>
+        
+        
+        
+       
+    </div>
+        
+        
+        
+       
+    </div>
+
+</body>
+</html>

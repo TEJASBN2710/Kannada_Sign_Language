@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>KSL - Result</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" sizes="16x16" href="{{ url_for('static', filename='logo.jpg') }}"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+
+    <!-- Animate.min -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='animate.min.css') }}">
+
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+            background-color: #faedcd;
+            background-image: url('static/kannada.png'); /* Add your background image here */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: bottom; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+        }
+        nav {
+            background-color: rgb(247, 6, 6);
+            overflow: hidden;
+            height: 40px;
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 24px;
+            text-decoration: none;
+            font-size: 22px;
+            font-family: 'Forte';
+        }
+
+        /* Header Styles */
+        .bg-inner {
+            background: ; /* Light overlay */
+            padding: 60px 0; /* Padding for the header */
+            text-align: center;
+            height: 100px;
+        }
+
+        .top-heading-inner {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #F5F5DC;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .card-title {
+            margin-bottom: 20px;
+        }
+
+        .card-title h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Button Styles */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+        }
+
+        .log_in_box {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .log_in_box:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40; /* Dark grey background for footer */
+            color: white; /* White text */
+            padding: 20px 0; /* Padding for footer */
+            text-align: center;
+            margin-top: auto; /* Push footer to the bottom */
+            float: bottom;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .top-heading-inner {
+                font-size: 28px;
+            }
+
+            .card {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .log_in_box {
+                font-size: 16px;
+            }
+        }
+
+        /* Custom Styles for Price Card */
+        .price-card {
+            background-color: #F5F5DC;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .price-card .card-title h2 {
+            font-size: 22px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+  <nav>
+   <!--  <a href="{{url_for('contact')}}">Contact</a>
+    <a href="{{url_for('analyze')}}">Analyze</a> -->
+    <a href="{{url_for('about')}}">Home</a>
+</nav>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div id="home" class="bg-inner low-back-gradient-inner">
+        <div class="container">
+            <div style="padding-top: 40px" class="row">
+                <div class="lead col-lg-12 col-xm-12 text-center">
+                    <h1><span class="top-heading-inner">RESULT</span></h1>
+                    <div class="list-o-i white">
+                        <p class="white no-p"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Card -->
+    <div class="card">
+        <div class="card-title">
+            <h2 class="text-center">RESULT of Image is {{ preds[0] }}</h2>
+        </div>
+    </div>
+
+    <!-- Price Card -->
+    <div class="price-card">
+        <div class="card-title">
+            <h2 class="text-center">Accuarcy = {{ preds[1] }} %</h2>
+        </div>
+    
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kannada Sign Language. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

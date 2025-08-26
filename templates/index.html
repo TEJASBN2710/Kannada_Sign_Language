@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSL - Home</title>
+    <link rel="shortcut icon" sizes="16x16" href="{{ url_for('static', filename='logo.jpg') }}"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+            font-family: 'Times New Roman';
+            background-image: url('static/kannada27.png'); /* Add your background image here */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: bottom; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+        }
+
+        header {
+            background-color: #faedcd;
+            color: black;
+            padding: 20px 20px; /* Increased padding for a better look */
+            text-align: center;
+            font-family: 'Algerian', sans-serif; /* Use a specific font */
+            font-size: 35px; /* Increase font size */
+            font-weight: bold; /* Make the text bold */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+            height: 130px; /* Set a fixed height for the header */
+            line-height: 100px; /* Center text vertically within the header */
+        }
+
+        nav {
+            background-color: rgb(247, 6, 6);
+            overflow: hidden;
+            height: 60px;
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 24px;
+            text-decoration: none;
+            font-size: 22px;
+            font-family: 'Forte';
+        }
+
+        section {
+            background-color: ; /* Semi-transparent white for readability */
+            border: 1px solid #ccc;
+            padding: 30px; /* Increased padding inside the section */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%; /* Responsive width */
+            margin: 20px auto; /* Center sections with margin between them */
+            height: auto; /* Auto height to accommodate content */
+        }
+
+        section h2 {
+            font-size: 24px; /* Section header font size */
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin-bottom: 20px; /* Increase space between paragraphs */
+            line-height: 1.8; /* Increase line height for better readability */
+            font-size: 18px; /* Slightly increase font size */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Push the footer to the bottom */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>KANNADA SIGN LANGUAGE</h1>
+</header>
+
+<nav>
+    <a href="{{url_for('contact')}}">Contact</a>
+    <a href="{{url_for('analyze')}}">Analyze</a>
+    <a href="{{url_for('about')}}">About</a>
+</nav>
+
+<section>
+    <h2>Welcome to the Kannada Sign Language Project</h2>
+    <p>This project aims to promote awareness and understanding of sign language among the Kannada-speaking community. The Kannada Sign Language is an initiative designed to develop and standardize a sign language system for Kannada-speaking Deaf and Hard of Hearing individuals. This aims to bridge communication barriers by documenting and promoting Kannada-based signs while preserving the linguistic and cultural identity of the region. By creating a structured and widely accepted Kannada Sign Language (KSL), the KSL seeks to enhance accessibility and inclusivity in various aspects of daily life.</p>
+</section>
+
+
+
+<section>
+    <p>A key focus of the project is research and development, where existing informal signs used by the Deaf community are studied and refined to create a comprehensive sign language system. Linguists, educators, and members of the Deaf community collaborate to ensure accuracy and usability. Additionally, efforts are being made to integrate digital tools such as mobile applications, online resources, and AI-driven translation services to support learning and communication.</p>
+</section>
+
+<section>
+    <p>The KSL also emphasizes training and education, offering workshops and certification programs for sign language interpreters, educators, and caregivers. Schools, workplaces, and public institutions are encouraged to adopt Kannada Sign Language to foster an inclusive environment. Public awareness campaigns, government collaborations, and media initiatives further support the recognition and acceptance of KSL across Karnataka.</p>
+</section>
+
+<section>
+    <p>By addressing challenges such as the lack of trained professionals and limited learning materials, the Kannada Sign Language aspires to create a sustainable and widely accepted communication system. Through continued research, advocacy, and technological integration, the project aims to empower the Deaf community, ensuring their equal participation in education, employment, and society.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Kannada Sign Language. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
